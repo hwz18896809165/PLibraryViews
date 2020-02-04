@@ -1,0 +1,39 @@
+<div ng-controller="login">
+    <div class="container-fluid">
+        <div class="login-form  col-lg-3 col-lg-offset-4  col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+            <form class="form-horizontal">
+                <div class="form-body login-form-body">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">姓名：</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="userName" class="k-textbox" style="width:100%;" ng-model="loginManagementUserInfo.userName"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8  col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">密码：</label>
+                                <div class="col-md-7">
+                                    <input type="password" id="password" class="k-textbox" style="width:100%;" ng-model="loginManagementUserInfo.password"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3" >
+                        <button id="login">登录</button>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1" >
+                        <button id="register">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

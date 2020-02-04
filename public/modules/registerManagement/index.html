@@ -1,0 +1,109 @@
+<div ng-controller="register">
+    <div class="container-fluid">
+        <div class="login-form  col-lg-3 col-lg-offset-4  col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+            <form class="form-horizontal">
+                <div class="form-body register-form-body">
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">姓名：</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="userName" class="k-textbox" style="width:100%;" ng-model="userInfo.userName"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8  col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">密码：</label>
+                                <div class="col-md-7">
+                                    <input type="password" id="password" class="k-textbox" style="width:100%;" ng-model="userInfo.password"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8  col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">再次输入密码：</label>
+                                <div class="col-md-7">
+                                    <input type="password" id="password2" class="k-textbox" style="width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">性别：</label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <input type="text" id="sex" class="form-control" style="width:100%;" ng-model="userInfo.sex"/>
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                选择
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><div id="selectMale" class="combox-select-div">男</div></li>
+                                                <li><div id="selectFeMale" class="combox-select-div">女</div></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">电话：</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="phoneNumber" class="k-textbox" style="width:100%;" ng-model="userInfo.phoneNumber"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-show="!showCheckCode">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group">
+                                <label class="control-label col-md-5">邮箱：</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="email" class="k-textbox" style="width:100%;" ng-model="userInfo.email"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="showCheckCode" class="row">
+                        <div class="col-md-8 col-md-offset-1">
+                            <div class="form-group check-register-code">
+                                <label class="control-label col-md-5">验证码：</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="checkUserCode" class="k-textbox" style="width:100%;" ng-model="checkUserCode"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row">  
+                <div class="col-md-3 col-md-offset-3" ng-show="!showCheckCode">
+                    <button id="sign">确认</button>
+                </div>
+                <div class="col-md-3 col-md-offset-1" ng-show="!showCheckCode">
+                    <button id="backToLogin">返回</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3" ng-show="showCheckCode">
+                    <button id="signAgain">确认</button>
+                </div>
+                <div class="col-md-3 col-md-offset-1" ng-show="showCheckCode">
+                    <button id="backToRegister">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

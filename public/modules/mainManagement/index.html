@@ -1,0 +1,24 @@
+<div ng-controller="main" class="x-view-full" >
+  <div class="x-project-header column blue">
+   <div id="x-project-title">本科生毕业及学位申请系统管理后台</div>
+   <div class="main-userName">
+    <button id="userName" class="main-userName-button">{{currentUser}}</button>
+   </div>
+   <div class="main-logout">
+     <button id="logout" class="button blue">退出</button>
+   </div>
+  </div>
+  <div class="x-sidemenu">
+   <div class="x-sidemenu-one" ng-repeat="menu in menus" ng-show="menu.enabled">
+    <p class="sidemenu-one">{{menu.text}}</p>
+    <div class="x-sidemenu-two" ng-repeat="subMenu in menu.subMenus" ng-show="subMenu.enabled">
+     <input type="button" class="sidemenu-button" value="{{subMenu.text}}" ng-click="setContent(subMenu.action)"></input>
+    </div>
+   </div>
+  </div>
+  <div ng-show="showUserInfo">
+  </div>
+  <div class="x-contents" ui-view="">
+  </div>
+</div>
+</div>
