@@ -52,6 +52,41 @@
   margin-top: 40%;
 }
 
+.subpage-search{
+	position: relative;
+    min-height: 120px;
+    height: auto;
+	background-color: antiquewhite;
+	border: 1px solid #60aee4;
+	border-top: 0;
+	padding: 0px !important;
+}
+.subpage-search-infos{
+	margin-top: 2%;
+}
+
+.buttons{
+	position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    background-color: #999999;
+    margin-left: 15px;
+}
+.text-right {
+	position: relative;
+    text-align: right;
+    margin-right: 5%;
+    top: 10px;
+}
+
+.control-label {
+    margin-top: 1px;
+	font-weight: normal;
+	text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
 
 a {
   color: #00B7FF;
@@ -85,15 +120,16 @@ a {
  }
   
  div.x-contents {
-  display: inline-block;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  min-width: 90%;
-  min-height: 90%;
-  background-color: snow;
+	display: inline-block;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    min-width: 90%;
+    min-height: 90%;
+    background-color: azure;
  }
-  
+
+ 
  div.x-sidemenu-one{
   margin-left: 8px;
  }
@@ -119,14 +155,25 @@ a {
  .sidemenu-button:hover {background-color: #218fd5;}
   
  #x-project-title{
-  position: absolute;
-  display: inline-block;
-  top: 20px;
-  left: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  width: 500px;
+	position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    width: 350px;
  }
+
+.portlet {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    padding: 0px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
   
  #x-login-user{
   position: absolute;

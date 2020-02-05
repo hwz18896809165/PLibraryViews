@@ -1,6 +1,40 @@
 <div ng-controller="userManagement">
 	<div class="row">
-		<div class="col-md-8  col-md-offset-1" style="margin-top: 10%;">
+		<div class="col-md-12">
+			<div class="subpage-search">
+				<div class="row">
+					<div class="subpage-search-infos">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label col-md-4">姓名:</label>
+								<div class="col-md-8">
+									<input type="text" id="userName" name="userName" class="k-textbox" style="width:100%;" ng-model="userInfo.userName" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label col-md-4">身份:</label>
+								<div class="col-md-8">
+									<input type="text" id="identity" name="identity" class="k-textbox" style="width:100%;" ng-model="userInfo.identity" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="buttons">
+			<div class="text-right">
+				<button id="search" class="button gray">搜索</button>
+				<button id="refresh" class="button gray">重置</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10  col-md-offset-1" style="margin-top: 5%;">
 			<div class="table-responsive">
 				<table id="userInfo" class="table table-bordered">
 					<thead>
@@ -18,4 +52,4 @@
 			</div>  	
 		</div>
 	</div>
-</div>
+</div></div>
