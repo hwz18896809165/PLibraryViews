@@ -110,3 +110,18 @@ $.dataTablesSettings = {
 function copy(obj){
     return JSON.parse(JSON.stringify(obj))
 }
+
+
+//绑定监听鼠标移动事件
+function listenMouseMoveByClassName(className,setClassName,callback1,callback2){
+    $("."+className).hover(
+        function(){
+            $("."+className).addClass(setClassName);
+            callback1();
+        },
+        function(){
+            $("."+className).removeClass(setClassName);
+            callback2();
+        }
+    )
+}

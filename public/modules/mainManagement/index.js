@@ -39,4 +39,8 @@ angular.module('app').controller('main', function ($scope, $state) {
         $state.go(content)
     }
     $state.go("main.userManagement")
+
+    listenMouseMoveByClassName("user-head-background","user-head-background-up",function(){
+        console.log(GetCookie("UserName"))
+    },function(){})
 });

@@ -1,11 +1,14 @@
 <div ng-controller="main" class="x-view-full" >
   <div class="x-project-header column blue">
    <div id="x-project-title">本科生毕业及学位申请系统</div>
-   <div class="main-userName">
-    <button id="userName" class="main-userName-button">{{currentUser}}</button>
-   </div>
-   <div class="main-logout">
-     <button id="logout" class="button blue">退出</button>
+   <div class="user-head-background">
+    <div class="main-uerHead">
+      <img src="../../images/userHeadImage.jpg">
+      <!--<button id="logout" class="button blue">退出</button>-->
+    </div>
+    <div class="main-userHead-show">
+      <img src="../../images/sort_desc_disabled.png">
+    </div>
    </div>
   </div>
   <div class="x-sidemenu">
@@ -16,7 +19,8 @@
     </div>
    </div>
   </div>
-  <div ng-show="showUserInfo">
+  <div class="main-user-control">
+    
   </div>
   <div class="x-contents" ui-view="">
   </div>
