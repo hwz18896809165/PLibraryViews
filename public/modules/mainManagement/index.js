@@ -20,27 +20,40 @@ angular.module('app').controller('main', function ($scope, $state) {
           {
            text: "权限管理",
            enabled: true,
-           action:"/access"   
+           action:"main.privilegeManagement"   
           }
          ]
         },
        ]; 
-
-    clickElement("logout",function(){
-        var res = confirm("您确定要退出吗?");
-        if(res === true){
-            sendRequests(userManagementServerInterface+"userLogout","POST",'json',{userName : GetCookie("UserName")},function(res){
-                $state.go("login");
-            })
-        }
-    })
-
     $scope.setContent = function(content){
         $state.go(content)
     }
     $state.go("main.userManagement")
 
-    listenMouseMoveByClassName("user-head-background","user-head-background-up",function(){
-        console.log(GetCookie("UserName"))
-    },function(){})
+    listenMouseMoveBySelector(".user-head-background","user-head-background-up",function(){})
+    listenMouseMoveBySelector("#logout","gray",logout)
+    listenMouseMoveBySelector("#personalInfo","gray",showUserInfo)
+    listenMouseMoveBySelector("#updatePassword","gray",function(){})
+
+    $(".user-head-background").on('click',function(e){
+        stopPropagation(e);
+        $(".main-user-control").fadeIn();
+    })
+    $(document).bind('click',function(){ 
+        $(".main-user-control").fadeOut();
+    });
+    
+    function showUserInfo(){
+        console.log("show")
+    }
+
+    function logout(){
+        var res = confirm("您确定要退出吗?");
+        if(res === true){
+            sendRequests(userManagementServerInterface+"userLogout","POST",'json',{userName : GetCookie("UserName")},function(res){
+                $state.go("login");
+            })
+        };
+    };
+    
 });

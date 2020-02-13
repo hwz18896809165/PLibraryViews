@@ -3,11 +3,11 @@
    <div id="x-project-title">本科生毕业及学位申请系统</div>
    <div class="user-head-background">
     <div class="main-uerHead">
-      <img src="../../images/userHeadImage.jpg">
+      <img src="../../images/userHeadImage.jpg" class="img-responsive img-circle">
       <!--<button id="logout" class="button blue">退出</button>-->
     </div>
     <div class="main-userHead-show">
-      <img src="../../images/sort_desc_disabled.png">
+      <img src="../../images/sort_desc_disabled.png" class="img-responsive">
     </div>
    </div>
   </div>
@@ -20,7 +20,99 @@
    </div>
   </div>
   <div class="main-user-control">
-    
+    <div  class="main-userHead-show-title">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+          <div class="main-userHead-show-title-img">
+            <img src="../../images/userHeadImage.jpg" class="img-responsive img-circle">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="main-userHead-show-title-userName">
+            {{currentUser}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button id='personalInfo' class="button main-userHead-show-title-button">个人资料</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button id='updatePassword' class="button main-userHead-show-title-button">修改密码</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button id='logout' class="button main-userHead-show-title-button" >退出登录</button>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="display: none;" id="showUserInfo">
+    <div class="container-fluid">
+      <div class="login-form  col-lg-3 col-lg-offset-4  col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+          <div class="form-horizontal">
+              <div class="form-body register-form-body">
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-1">
+                          <div class="form-group">
+                              <label class="control-label col-md-5">姓名：</label>
+                              <div class="col-md-7">
+                                  <input type="text" id="userName" class="k-textbox" style="width:100%;" ng-model="userInfo.userName"/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-1">
+                          <div class="form-group">
+                              <label class="control-label col-md-5">性别：</label>
+                              <div class="col-md-7">
+                                  <div class="input-group">
+                                      <input type="text" id="sex" class="form-control" style="width:100%;" ng-model="userInfo.sex"/>
+                                      <div class="input-group-btn">
+                                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                              选择
+                                              <span class="caret"></span>
+                                          </button>
+                                          <ul class="dropdown-menu pull-right">
+                                              <li><div id="selectMale" class="combox-select-div">男</div></li>
+                                              <li><div id="selectFeMale" class="combox-select-div">女</div></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-1">
+                          <div class="form-group">
+                              <label class="control-label col-md-5">电话：</label>
+                              <div class="col-md-7">
+                                  <input type="text" id="phoneNumber" class="k-textbox" style="width:100%;" ng-model="userInfo.phoneNumber"/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-1">
+                          <div class="form-group">
+                              <label class="control-label col-md-5">邮箱：</label>
+                              <div class="col-md-7">
+                                  <input type="text" id="email" class="k-textbox" style="width:100%;" ng-model="userInfo.email"/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
   <div class="x-contents" ui-view="">
   </div>

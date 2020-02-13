@@ -112,16 +112,44 @@ function copy(obj){
 }
 
 
-//绑定监听鼠标移动事件
-function listenMouseMoveByClassName(className,setClassName,callback1,callback2){
-    $("."+className).hover(
-        function(){
-            $("."+className).addClass(setClassName);
-            callback1();
-        },
-        function(){
-            $("."+className).removeClass(setClassName);
-            callback2();
-        }
-    )
+//绑定监听鼠标事件
+function listenMouseMoveBySelector(selector,setClassName,callback){
+
+     $(selector).mouseenter(function(){
+        $(selector).addClass(setClassName);
+     })
+     $(selector).mouseleave(function(){
+        $(selector).removeClass(setClassName);
+     })
+     $(selector).click(callback);
+}
+
+
+//获取鼠标位置
+function getClientCoordinates(e){
+    x = e.clientX;
+    y = e.clientY;
+    return [x,y];
+}
+
+//阻止浏览器冒泡
+function stopPropagation(e){
+    if(e.stopPropagation){
+        e.stopPropagation()//阻止非ie浏览器的时间冒泡
+    }else{
+        e.cancelBubble=true;//阻止ie冒泡事件
+    }    
+    
+}
+
+function stopEvent(event){ //阻止冒泡事件
+    //取消事件冒泡
+    var e=arguments.callee.caller.arguments[0]||event; //若省略此句，下面的e改为event，IE运行可以，但是其他浏览器就不兼容
+    if (e && e.stopPropagation) {
+    // this code is for Mozilla and Opera
+    e.stopPropagation();
+    } else if (window.event) {
+    // this code is for IE
+     window.event.cancelBubble = true;
+    }
 }

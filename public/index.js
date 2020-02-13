@@ -39,6 +39,16 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
 			    }]
 			}
 		})
+
+		.state('main.privilegeManagement',{
+			url : '/privilegeManagement',
+			templateUrl : './modules/privilegeManagement/index.html',
+			resolve:{
+				loadMyCtrl:['$ocLazyLoad',function($ocLazyLoad){
+					return $ocLazyLoad.load('./modules/privilegeManagement/index.js')
+				}]
+			}
+		})
         
 }])
 
